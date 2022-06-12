@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <main className={styles.main}>
-        <h3 className={styles.title}>go to short code</h3>
+        <h3 className={styles.title}>modify short code</h3>
           <div className={styles.grid}>
             <a className={styles.card}>
 

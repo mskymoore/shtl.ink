@@ -11,7 +11,7 @@ export default function AllUrlRecordsList({ urls }) {
     }
 
     return <div>
-                <h3 className={styles.title}>url records list</h3>
+                <h3 className={styles.title}>short code list</h3>
                 {urls.map(url => 
 
                 <div key={url.short_code} className={styles.grid}>

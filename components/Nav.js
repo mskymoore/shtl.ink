@@ -11,7 +11,7 @@ export default function Nav(){
                     <Link href='/'>shtl.ink</Link>
                 </li>
                 <li>
-                    <Link href='/urls'>view urls</Link>
+                    <Link href='/urls'>view all short codes</Link>
                 </li>
                 <li>
                     <Link href='/modify'>modify short code</Link>
