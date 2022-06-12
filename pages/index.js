@@ -22,19 +22,6 @@ export default function Home() {
             </a>
           </div>
       </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://github.com/mskymoore/url_shortener"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Get the source on{' '}
-          <span className={styles.logo}>
-            <Image  src="/GitHub_Logo.png" alt="GitHub Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
     </div>
   )
 }

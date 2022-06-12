@@ -1,4 +1,4 @@
-.PHONY start-frontend start-backend
+.PHONY: start-frontend start-backend
 
 start-frontend:
 	npm run dev
