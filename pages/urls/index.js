@@ -1,14 +1,22 @@
+import styles from '../../styles/Layout.module.css'
+
+
 export default function AllUrlRecordsList({ urls }) {
     
-    return <h1>
-                URL Records List: 
+    return <div>
                 {urls.map(url => 
-                <div key={url.short_code}>
-                    -----------<br></br>
-                    {url.short_code}-~/<br></br>
-                    {url.url}
-                </div>)}
-            </h1>
+
+                <div key={url.short_code} className={styles.grid}>
+                    <a className={styles.card}>
+                        <p className={styles.grid}>
+                            <code className={styles.code}>{url.short_code}</code>
+                            <code className={styles.code}>{url.url}</code>
+                        </p>
+                    </a>
+                </div>
+
+                )}
+            </div>
 }
 
 export async function getServerSideProps({ params }) {

@@ -1,13 +1,27 @@
 import { useRouter } from 'next/router'
+import styles from '../../styles/Layout.module.css'
 
 export default function Url({ url_record }){
     const router = useRouter();
     const { short_code } = router.query
     if (url_record.url){
-        return <h1>{url_record.url}</h1>
+        return <div className={styles.grid}>
+                    <a className={styles.card}>
+                        <p className={styles.grid}>
+                            <code className={styles.code}>{url_record.short_code}</code>
+                            <code className={styles.code}>{url_record.url}</code>
+                        </p>
+                    </a>
+                </div>
     }
     else {
-        return <h1>{url_record.message}</h1>
+        return <div className={styles.grid}>
+                    <a className={styles.card}>
+                        <p className={styles.grid}>
+                            <code className={styles.code}>{url_record.message}</code>
+                        </p>
+                    </a>
+                </div>
     }
 }
 
