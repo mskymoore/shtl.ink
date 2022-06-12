@@ -5,7 +5,7 @@ export default function Url({ url_record }){
     const router = useRouter();
     const { short_code } = router.query
 
-    function copyclip(){
+    function copy_to_clipboard(){
         navigator.clipboard.writeText(url_record.short_code)
     }
 
@@ -14,7 +14,7 @@ export default function Url({ url_record }){
                     <a className={styles.card}>
                         <p className={styles.grid}>
                             <code className={styles.code}>{url_record.short_code}</code>
-                            <button onClick={copyclip} type="copy">copy</button>
+                            <button onClick={copy_to_clipboard} type="copy">copy</button>
                             <code className={styles.code}>{url_record.url}</code>
                         </p>
                     </a>

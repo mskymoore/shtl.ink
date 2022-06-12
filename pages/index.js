@@ -22,12 +22,12 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <main className={styles.main}>
-        <h1 className={styles.title}></h1>
+        <h3 className={styles.title}>create short url</h3>
           <div className={styles.grid}>
             <a className={styles.card}>
 
             <form onSubmit={create_short_code}>
-              <label htmlFor="url">URL:</label>
+              <label htmlFor="url">url:</label>
               <input type="text" id="url" name="url" defaultValue="http://superlong.example.url/gobldygoop" />
               <button type="create">Create</button>
             </form> 

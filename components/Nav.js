@@ -11,10 +11,10 @@ export default function Nav(){
                     <Link href='/'>shtl.ink</Link>
                 </li>
                 <li>
-                    <Link href='/urls'>view urls list</Link>
+                    <Link href='/urls'>view urls</Link>
                 </li>
                 <li>
-                    <Link href='/modify'>modify a short url</Link>
+                    <Link href='/modify'>modify short code</Link>
                 </li>
                 <li>
                     <a href="https://github.com/mskymoore/shtl.ink">
