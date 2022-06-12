@@ -28,7 +28,7 @@ export default function Url({ url_record }){
 
 export async function getServerSideProps({ params }){
 
-    const req = await fetch(`http://localhost:8000/get`, {
+    const req = await fetch(`http://localhost:8000/short_code`, {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(

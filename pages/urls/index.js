@@ -20,7 +20,7 @@ export default function AllUrlRecordsList({ urls }) {
 }
 
 export async function getServerSideProps({ params }) {
-    const req = await fetch(`http://localhost:8000/all`);
+    const req = await fetch(`http://localhost:8000/all_short_codes`);
     const data = await req.json();
     
     return {
