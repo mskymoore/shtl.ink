@@ -4,11 +4,17 @@ import styles from '../../styles/Layout.module.css'
 export default function Url({ url_record }){
     const router = useRouter();
     const { short_code } = router.query
+
+    function copyclip(){
+        navigator.clipboard.writeText(url_record.short_code)
+    }
+
     if (url_record.url){
         return <div className={styles.grid}>
                     <a className={styles.card}>
                         <p className={styles.grid}>
                             <code className={styles.code}>{url_record.short_code}</code>
+                            <button onClick={copyclip} type="copy">copy</button>
                             <code className={styles.code}>{url_record.url}</code>
                         </p>
                     </a>
