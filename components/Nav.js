@@ -8,13 +8,13 @@ export default function Nav(){
         <nav className={navStyles.nav}>
             <ul>
                 <li>
-                    <Link href='/'>Create New Short Url</Link>
+                    <Link href='/'>shtl.ink</Link>
                 </li>
                 <li>
-                    <Link href='/urls'>View Urls List</Link>
+                    <Link href='/urls'>view urls list</Link>
                 </li>
                 <li>
-                    <Link href='/modify'>Modify A Short Url</Link>
+                    <Link href='/modify'>modify a short url</Link>
                 </li>
                 <li>
                     <a href="https://github.com/mskymoore/shtl.ink">
