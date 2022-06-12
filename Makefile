@@ -5,4 +5,4 @@ start-frontend:
 
 start-backend:
 	docker pull skymoore/shtl-ink-api:latest
-	docker run --rm -it  -p 8000:8000/tcp skymoore/shtl-ink-api:latest
+	docker run --rm -it  -p 8000:8000/tcp shtl-ink-api:latest
