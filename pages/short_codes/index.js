@@ -10,6 +10,10 @@ export default function AllUrlRecordsList({ urls }) {
         Router.push(`short_codes/${short_code}`) 
     }
 
+    function stop_focus(event) {
+        event.target.blur()
+    }
+
     return <div className='container'>
                 <h3>short code list</h3>
                 {urls.map(url => 
@@ -21,7 +25,7 @@ export default function AllUrlRecordsList({ urls }) {
                        
                     </div>
                     <div className='row'>
-                        <button className='button-black column' onClick={copy_to_clipboard(url.short_code)} type="reset">copy</button>
+                        <button className='button-black column' onFocus={stop_focus} onClick={copy_to_clipboard(url.short_code)} type="reset">copy</button>
                         <button className='button-black column' onClick={go_to_short_code(url.short_code)} type="submit">modify</button>
                     </div>
                 </div>

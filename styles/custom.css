@@ -15,23 +15,18 @@
     margin-right: 10px;
 }
 
-.nav-bar {
-    background-color: #9d9d9d;
-}
-
-.nav-item {
-    height: 2.8rem;
-    line-height: 2.8rem;
-    padding: 0 1.5rem;
-}
-
-.container {
-    background-color: #000000;
-}
-
-.container ul li a {
-    color: #FFFFFF;
+.nav-bar ul li, img, a {
+    background-color: #1f002c;
+    color: #ffffff;
     text-decoration: none;
+    border-radius: 5px;
+    margin: 1px;
+    text-align: center;
+}
+
+.nav-bar ul li {
+    border-style: inset;
+    border-color: #666666
 }
 
 .card{
