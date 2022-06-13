@@ -73,7 +73,7 @@ export default function Url({ url_record }){
                     <button className='button-black' onClick={delete_short_code} type="delete">delete</button>
                     <form onSubmit={modify_short_code}>
                         <label htmlFor="new_short_code">new short code:</label>
-                        <input type="text" id="new_short_code" name="new_short_code" defaultValue="" />
+                        <input type="text" id="new_short_code" name="new_short_code" maxLength={33} />
                         <button className='button-black' onFocus={stop_focus} type="modify">modify</button>
                     </form>
                 </div>

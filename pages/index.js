@@ -39,7 +39,8 @@ export default function Home() {
         <form onSubmit={create_short_code}>
           <fieldset>
           <label htmlFor="url">url:</label>
-          <input type="text" id="url" name="url"/>
+          <input type="text" id="url" name="url" maxLength={2000}
+            pattern="https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)"/>
           <div className='showHide'>
             <input type="checkbox" id="toggle" />
     

@@ -14,7 +14,7 @@ export default function Home() {
           <div className='card'>
             <form onSubmit={go_to_short_code}>
               <label htmlFor="short_code">short code:</label>
-              <input type="text" id="short_code" name="short_code" defaultValue="" />
+              <input type="text" id="short_code" name="short_code" maxLength={33}/>
               <button className="button-black" type="submit">go</button>
             </form>
           </div>
