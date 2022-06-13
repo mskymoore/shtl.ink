@@ -16,7 +16,7 @@ export default function Home() {
         body = {url: url}
     }
 
-    const req = await fetch(`http://localhost:8000/${endpoint}`, {
+    const req = await fetch(`${process.env.API_BASE_URL}/${endpoint}`, {
           method: 'POST',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify(body)
@@ -39,7 +39,7 @@ export default function Home() {
         <form onSubmit={create_short_code}>
           <fieldset>
           <label htmlFor="url">url:</label>
-          <input type="text" id="url" name="url" defaultValue="http://superlong.example.url/gobldygoop" />
+          <input type="text" id="url" name="url"/>
           <div className='showHide'>
             <input type="checkbox" id="toggle" />
     

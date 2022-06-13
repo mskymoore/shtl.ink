@@ -19,7 +19,7 @@ export default function AllUrlRecordsList({ urls }) {
                 {urls.map(url => 
                 <div className='card-small' key={url.short_code}>
                     <div className='row'>
-                        <code className='short-code column'>{url.short_code}</code>
+                        <code className='short-code column'>{process.env.BASE_URL}/{url.short_code}</code>
                         &#8921;
                         <code className='column'>{url.url}</code>
                        
@@ -35,7 +35,7 @@ export default function AllUrlRecordsList({ urls }) {
 }
 
 export async function getServerSideProps({ params }) {
-    const req = await fetch(`http://localhost:8000/all_short_codes`);
+    const req = await fetch(`${process.env.API_BASE_URL}/all_short_codes`);
     const data = await req.json();
     
     return {

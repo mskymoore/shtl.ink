@@ -6,7 +6,7 @@ export default function Url({ url_record }){
     const router = useRouter();
     const { short_code } = router.query
     if (url_record.url){
-        const Redirect = redirect(`http://localhost:8000/${url_record.short_code}`)
+        const Redirect = redirect(`${process.env.API_BASE_URL}/${url_record.short_code}`)
         return <Redirect>
             <Layout>Redirecting to {url_record.url}!</Layout>
         </Redirect>
@@ -25,7 +25,7 @@ export default function Url({ url_record }){
 
 export async function getServerSideProps({ params }){
 
-    const req = await fetch(`http://localhost:8000/short_code`, {
+    const req = await fetch(`${process.env.API_BASE_URL}/short_code`, {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(

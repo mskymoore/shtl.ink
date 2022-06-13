@@ -64,9 +64,6 @@ code {
     color: #1f002c;
     background-color: #999999;
 }
-.card-small code.short-code {
-    max-width: 15%;
-}
 
 .card input {
     background-color: #000000;

@@ -13,7 +13,7 @@ export default function Url({ url_record }){
 
         }
 
-        const req = await fetch(`http://localhost:8000/modify_short_code`, {
+        const req = await fetch(`${process.env.API_BASE_URL}/modify_short_code`, {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(
@@ -44,7 +44,7 @@ export default function Url({ url_record }){
     }
 
     async function delete_short_code(){
-        const req = await fetch(`http://localhost:8000/delete_short_code`, {
+        const req = await fetch(`${process.env.API_BASE_URL}/delete_short_code`, {
         method: 'DELETE',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(
@@ -59,7 +59,7 @@ export default function Url({ url_record }){
 
     if (url_record.url){
         return <div className='card'>
-                    <code>{url_record.short_code}</code>&#8921;
+                    <code>{process.env.API_BASE_URL}/{url_record.short_code}</code>&#8921;
                     <code>{url_record.url}</code><br/>
                     <button className='button-black' onFocus={stop_focus} onClick={copy_to_clipboard} type="copy">copy</button>
                     <button className='button-black' onClick={delete_short_code} type="delete">delete</button>
@@ -84,7 +84,7 @@ export default function Url({ url_record }){
 
 export async function getServerSideProps({ params }){
 
-    const req = await fetch(`http://localhost:8000/short_code`, {
+    const req = await fetch(`${process.env.API_BASE_URL}/short_code`, {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(
