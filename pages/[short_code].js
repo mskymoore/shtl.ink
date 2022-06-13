@@ -12,10 +12,10 @@ export default function Url({ url_record }){
         </Redirect>
     }
     else {
-        return <div
-                    <a
-                        <p
-                            <code{url_record.message}</code>
+        return <div>
+                    <a>
+                        <p>
+                            <code>{url_record.message}</code>
                         </p>
                     </a>
                 </div>

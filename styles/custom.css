@@ -29,6 +29,10 @@
     border-color: #666666
 }
 
+.nav-bar a:focus {
+    color: #ffffff
+}
+
 .card{
     background-color: #000000;
     border-color: #666666;
@@ -55,11 +59,10 @@
     padding: 1rem;
 }
 
-.card-small code {
+code {
     color: #1f002c;
     background-color: #999999;
 }
-
 .card-small code.short-code {
     max-width: 15%;
 }
