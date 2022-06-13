@@ -1,8 +1,12 @@
 import Layout from '../components/Layout'
-import '../styles/globals.css'
+import '../styles/fonts.css'
+import '../styles/normalize.css'
+import '../styles/milligram.css'
+import '../styles/custom.css'
 
 function MyApp({ Component, pageProps }) {
-  return (<Layout>
+  return (
+          <Layout>
             <Component {...pageProps}></Component>
           </Layout>
   ) 

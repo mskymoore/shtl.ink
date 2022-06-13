@@ -1,19 +1,19 @@
-import styles from '../styles/Layout.module.css'
+//import styles from '../styles/Layout.module.css'
 import Router from 'next/router'
 
 export default function Home() {
   async function go_to_short_code(event){
     event.preventDefault()
     const short_code = event.target.short_code.value
-    Router.push(`/urls/${short_code}`)
+    Router.push(`short_codes/${short_code}`)
   }
 
   return (
-    <div className={styles.container}>
-      <main className={styles.main}>
-        <h3 className={styles.title}>modify short code</h3>
-          <div className={styles.grid}>
-            <a className={styles.card}>
+    <div>
+      <main>
+        <h3>modify short code</h3>
+          <div>
+            <a>
 
             <form onSubmit={go_to_short_code}>
               <label htmlFor="short_code">short code:</label>

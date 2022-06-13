@@ -1,7 +1,6 @@
 import { useRouter } from 'next/router'
 import redirect from 'nextjs-redirect'
 import Layout from '../components/Layout'
-import styles from '../styles/Layout.module.css'
 
 export default function Url({ url_record }){
     const router = useRouter();
@@ -13,10 +12,10 @@ export default function Url({ url_record }){
         </Redirect>
     }
     else {
-        return <div className={styles.grid}>
-                    <a className={styles.card}>
-                        <p className={styles.grid}>
-                            <code className={styles.code}>{url_record.message}</code>
+        return <div
+                    <a
+                        <p
+                            <code{url_record.message}</code>
                         </p>
                     </a>
                 </div>

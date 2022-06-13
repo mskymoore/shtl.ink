@@ -1,6 +1,5 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Layout.module.css'
+//import styles from '../styles/Layout.module.css'
+//import styles from '../styles/milligram.css'
 
 export default function Home() {
   async function create_short_code(event){
@@ -20,21 +19,20 @@ export default function Home() {
   }
 
   return (
-    <div className={styles.container}>
-      <main className={styles.main}>
-        <h3 className={styles.title}>create short url</h3>
-          <div className={styles.grid}>
-            <a className={styles.card}>
-
-            <form onSubmit={create_short_code}>
-              <label htmlFor="url">url:</label>
-              <input type="text" id="url" name="url" defaultValue="http://superlong.example.url/gobldygoop" />
-              <button type="create">Create</button>
-            </form> 
+    <div>
+      <main>
+        <h3>create short url</h3>
+          <div>
+            <a>
+              <form onSubmit={create_short_code}>
+                <fieldset>
+                <label htmlFor="url">url:</label>
+                <input type="text" id="url" name="url" defaultValue="http://superlong.example.url/gobldygoop" />
+                <button className="button-black" type="submit">Create</button>
+                </fieldset>
+              </form> 
             </a>
           </div>
-
-
       </main>
     </div>
   )

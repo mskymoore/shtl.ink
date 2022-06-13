@@ -1,5 +1,5 @@
 import {useRouter}  from 'next/router'
-import styles from '../../styles/Layout.module.css'
+//import styles from '../../styles/Layout.module.css'
 
 export default function Url({ url_record }){
     const router = useRouter();
@@ -17,7 +17,7 @@ export default function Url({ url_record }){
         });
 
         const data = await req.json();
-        router.push(`/urls/${data.short_code}`)
+        router.push(`short_codes/${data.short_code}`)
 
     }
 
@@ -36,31 +36,31 @@ export default function Url({ url_record }){
 
         const data = await req.json();
         alert(`${data.message}`)
-        router.push(`/urls`)
+        router.push(`short_codes`)
     }
 
     if (url_record.url){
-        return <div className={styles.grid}>
-                    <a className={styles.card}>
-                        <p className={styles.grid}>
-                            <code className={styles.code}>{url_record.short_code}</code>
+        return <div>
+                    <a>
+                        <p>
+                            <code>{url_record.short_code}</code>
                             <button onClick={copy_to_clipboard} type="copy">copy</button>
                             <button onClick={delete_short_code} type="delete">delete</button>
                             <form onSubmit={modify_short_code}>
-                            <label htmlFor="new_short_code">new short code:</label>
-                            <input type="text" id="new_short_code" name="new_short_code" defaultValue="" />
-                            <button type="modify">modify</button>
-            </form> 
-                            <code className={styles.code}>{url_record.url}</code>
+                                <label htmlFor="new_short_code">new short code:</label>
+                                <input type="text" id="new_short_code" name="new_short_code" defaultValue="" />
+                                <button type="modify">modify</button>
+                            </form> 
+                            <code>{url_record.url}</code>
                         </p>
                     </a>
                 </div>
     }
     else {
-        return <div className={styles.grid}>
-                    <a className={styles.card}>
-                        <p className={styles.grid}>
-                            <code className={styles.code}>{url_record.message}</code>
+        return <div>
+                    <a>
+                        <p>
+                            <code>{url_record.message}</code>
                         </p>
                     </a>
                 </div>
