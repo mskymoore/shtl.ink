@@ -17,7 +17,7 @@ export default function Url({ url_record }){
         });
 
         const data = await req.json();
-        router.push(`short_codes/${data.short_code}`)
+        router.push(`/short_codes/${data.short_code}`)
 
     }
 
@@ -40,20 +40,16 @@ export default function Url({ url_record }){
     }
 
     if (url_record.url){
-        return <div>
-                    <a>
-                        <p>
-                            <code>{url_record.short_code}</code>
-                            <button onClick={copy_to_clipboard} type="copy">copy</button>
-                            <button onClick={delete_short_code} type="delete">delete</button>
-                            <form onSubmit={modify_short_code}>
-                                <label htmlFor="new_short_code">new short code:</label>
-                                <input type="text" id="new_short_code" name="new_short_code" defaultValue="" />
-                                <button type="modify">modify</button>
-                            </form> 
-                            <code>{url_record.url}</code>
-                        </p>
-                    </a>
+        return <div className='card'>
+                    <code>{url_record.short_code}</code>&#8921;
+                    <code>{url_record.url}</code><br/>
+                    <button className='button-black' onClick={copy_to_clipboard} type="copy">copy</button>
+                    <button className='button-black' onClick={delete_short_code} type="delete">delete</button>
+                    <form onSubmit={modify_short_code}>
+                        <label htmlFor="new_short_code">new short code:</label>
+                        <input type="text" id="new_short_code" name="new_short_code" defaultValue="" />
+                        <button className='button-black' type="modify">modify</button>
+                    </form>
                 </div>
     }
     else {

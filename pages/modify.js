@@ -9,22 +9,15 @@ export default function Home() {
   }
 
   return (
-    <div>
-      <main>
+    <div className='container'>
         <h3>modify short code</h3>
-          <div>
-            <a>
-
+          <div className='card'>
             <form onSubmit={go_to_short_code}>
               <label htmlFor="short_code">short code:</label>
               <input type="text" id="short_code" name="short_code" defaultValue="" />
-              <button type="go">go</button>
-            </form> 
-            </a>
+              <button className="button-black" type="submit">go</button>
+            </form>
           </div>
-
-
-      </main>
     </div>
   )
 }

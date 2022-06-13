@@ -10,20 +10,20 @@ export default function AllUrlRecordsList({ urls }) {
         Router.push(`short_codes/${short_code}`) 
     }
 
-    return <div>
+    return <div className='container'>
                 <h3>short code list</h3>
                 {urls.map(url => 
-
-                <div key={url.short_code}>
-                    <a>
-                        <p>
-                            <code>{url.short_code}</code>
-                            <a>&#8921;</a>
-                            <code>{url.url}</code>
-                            <button onClick={copy_to_clipboard(url.short_code)} type="submit">copy</button>
-                            <button onClick={go_to_short_code(url.short_code)} type="submit">modify</button>
-                        </p>
-                    </a>
+                <div className='card-small' key={url.short_code}>
+                    <div className='row'>
+                        <code className='short-code column'>{url.short_code}</code>
+                        &#8921;
+                        <code className='column'>{url.url}</code>
+                       
+                    </div>
+                    <div className='row'>
+                        <button className='button-black column' onClick={copy_to_clipboard(url.short_code)} type="reset">copy</button>
+                        <button className='button-black column' onClick={go_to_short_code(url.short_code)} type="submit">modify</button>
+                    </div>
                 </div>
 
                 )}

@@ -1,7 +1,29 @@
+* {
+    background-color: #000000;
+}
+
 .button-black {
-    background-color: black;
+    background-color: #333333;
     border-color: black;
-  }
+    height: 2.8rem;
+    line-height: 2.8rem;
+    padding: 0 1.5rem;
+}
+
+.row .button-black {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.nav-bar {
+    background-color: #9d9d9d;
+}
+
+.nav-item {
+    height: 2.8rem;
+    line-height: 2.8rem;
+    padding: 0 1.5rem;
+}
 
 .container {
     background-color: #000000;
@@ -10,4 +32,49 @@
 .container ul li a {
     color: #FFFFFF;
     text-decoration: none;
+}
+
+.card{
+    background-color: #000000;
+    border-color: #666666;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 15px;
+    padding: 3rem;
+    margin: 1rem;
+}
+
+.card-small{
+    background-color: #000000;
+    border-color: #666666;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 15px;
+    padding: 1rem;
+    margin: 1rem;
+    position: relative;
+
+}
+
+.card-small div {
+    padding: 1rem;
+}
+
+.card-small code {
+    color: #1f002c;
+    background-color: #999999;
+}
+
+.card-small code.short-code {
+    max-width: 15%;
+}
+
+.card input {
+    background-color: #000000;
+    color: #999999;
+}
+
+.card code {
+    color: #1f002c;
+    background-color: #999999;
 }

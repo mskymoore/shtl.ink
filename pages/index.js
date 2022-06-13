@@ -19,21 +19,17 @@ export default function Home() {
   }
 
   return (
-    <div>
-      <main>
-        <h3>create short url</h3>
-          <div>
-            <a>
-              <form onSubmit={create_short_code}>
-                <fieldset>
-                <label htmlFor="url">url:</label>
-                <input type="text" id="url" name="url" defaultValue="http://superlong.example.url/gobldygoop" />
-                <button className="button-black" type="submit">Create</button>
-                </fieldset>
-              </form> 
-            </a>
-          </div>
-      </main>
+    <div className="container">
+      <h3>create short url</h3>
+      <div className="card">
+        <form onSubmit={create_short_code}>
+          <fieldset>
+          <label htmlFor="url">url:</label>
+          <input type="text" id="url" name="url" defaultValue="http://superlong.example.url/gobldygoop" />
+          <button className="button-black" type="submit">Create</button>
+          </fieldset>
+        </form> 
+      </div>
     </div>
   )
 }
