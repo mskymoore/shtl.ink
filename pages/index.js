@@ -23,7 +23,13 @@ export default function Home() {
           });
 
     const data = await req.json();
-    router.push(`/short_codes/${data.short_code}`)
+    if(data.short_code){
+      router.push(`/short_codes/${data.short_code}`)
+    }
+    else{
+      alert(`${data.message}`)
+    }
+    
   }
 
   return (
