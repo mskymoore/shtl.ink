@@ -3,7 +3,14 @@ import Router from 'next/router'
 
 export default function AllUrlRecordsList({ urls }) {
     var copy_to_clipboard = short_code => () => {
-        navigator.clipboard.writeText(short_code)
+        const ta = document.createElement('textarea');
+        ta.style.cssText = 'opacity:0; position:fixed; width:1px; height:1px; top:0; left:0;';
+        ta.value = `${process.env.BASE_URL}/${short_code}`;
+        document.body.appendChild(ta);
+        ta.focus();
+        ta.select();
+        document.execCommand('copy');
+        ta.remove();
     }
 
     var go_to_short_code = short_code => () => {
@@ -25,7 +32,7 @@ export default function AllUrlRecordsList({ urls }) {
                        
                     </div>
                     <div className='row'>
-                        <button className='button-black column' onFocus={stop_focus} onClick={copy_to_clipboard(url.short_code)} type="reset">copy</button>
+                        <button className='button-black column' onFocus={stop_focus} onClick={copy_to_clipboard(url.short_code)}>copy</button>
                         <button className='button-black column' onClick={go_to_short_code(url.short_code)} type="submit">modify</button>
                     </div>
                 </div>

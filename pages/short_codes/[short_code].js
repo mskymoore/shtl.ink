@@ -36,7 +36,15 @@ export default function Url({ url_record }){
     }
 
     function copy_to_clipboard(){
-        navigator.clipboard.writeText(url_record.short_code)
+        //navigator.clipboard.writeText(url_record.short_code)
+        const ta = document.createElement('textarea');
+        ta.style.cssText = 'opacity:0; position:fixed; width:1px; height:1px; top:0; left:0;';
+        ta.value = `${process.env.BASE_URL}/${url_record.short_code}`;
+        document.body.appendChild(ta);
+        ta.focus();
+        ta.select();
+        document.execCommand('copy');
+        ta.remove();
     }
 
     function stop_focus(event){
