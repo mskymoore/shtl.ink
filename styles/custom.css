@@ -77,3 +77,23 @@ code {
     color: #1f002c;
     background-color: #999999;
 }
+
+.fieldsetContainer {
+    height: 0;
+    overflow: hidden;
+    transition: height 333ms linear;
+}
+
+#toggle {
+    display: none;
+}
+
+#toggle:checked ~ .fieldsetContainer {
+    height: 50px;
+}
+
+label .arrow-rt { display: inline-block; }
+label .arrow-dn { display: none; }
+
+#toggle:checked ~ label .arrow-rt { display: none; }
+#toggle:checked ~ label .arrow-dn { display: inline-block; }
