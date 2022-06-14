@@ -1,4 +1,7 @@
-.PHONY: start-frontend start-backend
+.PHONY: docker-image start-frontend start-backend
+
+docker-image:
+	docker build -t shtl-ink .
 
 start-frontend:
 	npm run dev
