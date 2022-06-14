@@ -1,7 +1,7 @@
 import Layout from '../components/Layout'
 import '../styles/fonts.css'
 import '../styles/normalize.css'
-import '../styles/milligram.css'
+import '../styles/milligram.min.css'
 import '../styles/custom.css'
 
 function MyApp({ Component, pageProps }) {
