@@ -27,6 +27,6 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
-    - run: npm run build --if-present
+    - run: API_BASE_URL=http://api.example.com npm run build --if-present
     # no tests yet
     # - run: npm test
