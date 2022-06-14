@@ -25,9 +25,11 @@ export default function Home() {
         <h3>modify short code</h3>
           <div className='card'>
             <form onSubmit={go_to_short_code}>
-              <label htmlFor="short_code">short code:</label>
-              <input type="text" id="short_code" name="short_code" maxLength={2000}/>
-              <button className="button-black" type="submit">go</button>
+              <fieldset id="code_search">
+                <label htmlFor="short_code">short code:</label>
+                <input type="text" id="short_code" name="short_code" required={true} minLength={1} maxLength={2000}/>
+                <button className="button-black" type="submit">go</button>
+              </fieldset>
             </form>
           </div>
     </div>

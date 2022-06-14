@@ -39,7 +39,7 @@ export default function Home() {
         <form onSubmit={create_short_code}>
           <fieldset>
           <label htmlFor="url">url:</label>
-          <input type="text" id="url" name="url" maxLength={2000}
+          <input type="text" id="url" name="url" maxLength={2000} required={true}
             pattern="https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)"/>
           <div className='showHide'>
             <input type="checkbox" id="toggle" />
@@ -54,7 +54,7 @@ export default function Home() {
     
             <div className="fieldsetContainer">
                 <fieldset id="fdst">
-                <input type="text" id="short_code" name="short_code"/>
+                <input type="text" id="short_code" name="short_code" required={false} minLength={1} maxLength={33}/>
                 </fieldset>
             </div>
           </div>

@@ -16,7 +16,7 @@ start-frontend-dev:
 
 start-frontend-docker:
 	docker pull skymoore/shtl-ink:latest
-	docker run --rm -it --add-host api.shtl.ink:host-gateway  -p 3000:3000/tcp skymoore/shtl-ink:latest
+	docker run --rm -it --add-host api.shtl.ink:host-gateway -v $$(pwd)/.env.docker:/opt/shtl_ink/.env.local -p 3000:3000/tcp skymoore/shtl-ink:latest
 
 start-backend:
 	docker pull skymoore/shtl-ink-api:latest
