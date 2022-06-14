@@ -1,4 +1,3 @@
-//import styles from '../../styles/Layout.module.css'
 import Router from 'next/router'
 
 export default function AllUrlRecordsList({ urls }) {
@@ -14,7 +13,7 @@ export default function AllUrlRecordsList({ urls }) {
     }
 
     var go_to_short_code = short_code => () => {
-        Router.push(`short_codes/${short_code}`) 
+        Router.push(`/short_codes/${short_code}`) 
     }
 
     function stop_focus(event) {

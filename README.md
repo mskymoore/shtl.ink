@@ -13,7 +13,11 @@ make start-frontend
 ```
 
 ## Run with Make via docker
-  The images presently on hub.docker.com require the ```/etc/hosts``` entry mentioned below.
+  The images presently on hub.docker.com require the ```/etc/hosts``` 
+  entry mentioned below if the api is running on the same host.  
+  When running on docker create a file called ```.env.docker``` and
+  pass it as a volume when creating the container like so
+  ```--volume $(pwd)/.env.docker:/opt/shtl_ink/.env.local``` example in ```Makefile```.
 ### terminal 1
 
 ```bash

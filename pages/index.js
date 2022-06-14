@@ -43,7 +43,6 @@ export default function Home() {
             pattern="https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)"/>
           <div className='showHide'>
             <input type="checkbox" id="toggle" />
-    
             <label htmlFor="toggle">
                 <span className='expand'>
                     custom short code
@@ -51,7 +50,6 @@ export default function Home() {
                     <span className="changeArrow arrow-dn">&nbsp;v</span>
                 </span>
             </label>
-    
             <div className="fieldsetContainer">
                 <fieldset id="fdst">
                 <input type="text" id="short_code" name="short_code" required={false} minLength={1} maxLength={33}/>

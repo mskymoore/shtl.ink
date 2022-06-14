@@ -1,6 +1,5 @@
 import { useRouter } from 'next/router'
 import redirect from 'nextjs-redirect'
-import Layout from '../components/Layout'
 
 export default function Url({ url_record }){
     const router = useRouter();

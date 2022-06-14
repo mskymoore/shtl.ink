@@ -1,4 +1,3 @@
-//import styles from '../styles/Layout.module.css'
 import Router from 'next/router'
 
 export default function Home() {
@@ -12,11 +11,11 @@ export default function Home() {
     if (data.match(url_regex) && data.includes(process.env.BASE_URL)){
       var short_code = data.split('/')
       short_code = short_code[short_code.length - 1]
-      Router.push(`short_codes/${short_code}`)
+      Router.push(`/short_codes/${short_code}`)
     }
 
     else{
-      Router.push(`short_codes/${data}`)
+      Router.push(`/short_codes/${data}`)
     }
   }
 
