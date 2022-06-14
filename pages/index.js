@@ -16,7 +16,7 @@ export default function Home() {
         body = {url: url}
     }
 
-    const req = await fetch(`${process.env.API_BASE_URL}/${endpoint}`, {
+    const req = await fetch(`/api/${endpoint}`, {
           method: 'POST',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify(body)

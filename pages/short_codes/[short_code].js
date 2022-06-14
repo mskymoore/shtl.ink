@@ -12,7 +12,7 @@ export default function Url({ url_record }){
             return
         }
 
-        const req = await fetch(`${process.env.API_BASE_URL}/modify_short_code`, {
+        const req = await fetch(`/api/modify_short_code`, {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(
@@ -51,7 +51,7 @@ export default function Url({ url_record }){
     }
 
     async function delete_short_code(){
-        const req = await fetch(`${process.env.API_BASE_URL}/delete_short_code`, {
+        const req = await fetch(`/api/delete_short_code`, {
         method: 'DELETE',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(
