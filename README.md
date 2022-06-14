@@ -13,6 +13,7 @@ make start-frontend
 ```
 
 ## Run with Make via docker
+  The images presently on hub.docker.com require the ```/etc/hosts``` entry mentioned below.
 ### terminal 1
 
 ```bash
@@ -26,5 +27,8 @@ make start-frontend-docker
 
 ## For running locally
   There will need to be an entry in ```/etc/hosts``` on the docker host like
-  ```127.0.0.1 localhost, api.shtl.ink```
-  where ```api.shtl.ink``` matches the entry in this projects ```API_BASE_URL``` (without the port) in the ```next.config.js```  file as well as the part of the argument before the ```:``` to the ```--add-host``` flag under the ```start-frontend-docker``` section of the ```Makefile```.
+  ```127.0.0.1 localhost, api.shtl.ink``` where ```api.shtl.ink``` matches the
+  entry in this projects ```API_BASE_URL``` (without the port) in the
+  ```next.config.js```  file as well as the part of the argument before the
+  ```:``` to the ```--add-host``` flag under the ```start-frontend-docker```
+  section of the ```Makefile```.

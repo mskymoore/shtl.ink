@@ -14,7 +14,7 @@ COPY public/* /opt/node-frontend/public/
 COPY styles/* /opt/node-frontend/styles/
 COPY *.js* /opt/node-frontend/
 WORKDIR /opt/node-frontend
-RUN npm install
+RUN npm ci
 RUN npm run build
 EXPOSE 3000
 ENTRYPOINT [ "npm", "run", "start" ]
