@@ -3,7 +3,7 @@
 }
 
 .button-black {
-    background-color: #333333;
+    background-color: #1f002c;
     border-color: black;
     height: 2.8rem;
     line-height: 2.8rem;
@@ -45,7 +45,7 @@
 }
 
 .card-small{
-    background-color: #000000;
+    background-color: #111111;
     border-color: #666666;
     border-width: 2px;
     border-style: solid;

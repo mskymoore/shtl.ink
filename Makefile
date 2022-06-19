@@ -11,12 +11,14 @@ install-dependencies:
 docker-image:
 	docker build -t shtl-ink .
 
+dev-docker-image:
+	docker build -t shtl-ink:local-dev .
+
 start-frontend-dev:
 	npm run dev
 
 start-frontend-docker:
-	docker pull skymoore/shtl-ink:latest
-	docker run --rm -it --add-host api.shtl.ink:host-gateway -v $$(pwd)/.env.docker:/opt/shtl_ink/.env.local -p 3000:3000/tcp shtl-ink:latest
+	docker run --rm -it --add-host localapi.shtl.ink:host-gateway -p 3000:3000/tcp shtl-ink:local-dev
 
 start-backend:
 	docker pull skymoore/shtl-ink-api:latest

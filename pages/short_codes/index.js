@@ -1,4 +1,5 @@
 import Router from 'next/router'
+import { EmailPasswordAuth } from "supertokens-auth-react/recipe/emailpassword"
 
 export default function AllUrlRecordsList({ urls }) {
     var copy_to_clipboard = short_code => () => {
@@ -20,7 +21,8 @@ export default function AllUrlRecordsList({ urls }) {
         event.target.blur()
     }
 
-    return <div className='container'>
+    return  <EmailPasswordAuth>
+            <div className='container'>
                 <h3>short code list</h3>
                 {urls.map(url => 
                 <div className='card-small' key={url.short_code}>
@@ -37,7 +39,7 @@ export default function AllUrlRecordsList({ urls }) {
                 </div>
 
                 )}
-            </div>
+            </div> </EmailPasswordAuth>
 }
 
 export async function getServerSideProps({ params }) {
