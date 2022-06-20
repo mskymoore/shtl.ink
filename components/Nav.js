@@ -10,11 +10,9 @@ export default function Nav(){
     const router = useRouter();
 
     async function onLogout() {
-        if (await Session.doesSessionExist()) {
-            await signOut();
-            user.current = null
-            router.push('/signout');
-        }
+        await signOut();
+        user.current = null
+        router.push('/signout');
     }
 
     useEffect( () => {

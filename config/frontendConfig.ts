@@ -27,7 +27,9 @@ export const frontendConfig = () => {
           }
         }
       }),
-      SessionReact.init(),
+      SessionReact.init({
+        cookieDomain: ".shtl.ink"
+      }),
     ],
   }
 }
