@@ -7,8 +7,14 @@ export default function Url({ url_record }){
     if (url_record.url){
         const Redirect = redirect(`${process.env.API_BASE_URL}/${url_record.short_code}`)
         return <Redirect>
-            <div>Redirecting to {url_record.url}!</div>
-        </Redirect>
+                <div>
+                    <a>
+                        <p>
+                            <code>redirecting to {url_record.url}</code>
+                        </p>
+                    </a>
+                </div>
+            </Redirect>
     }
     else {
         return <div>

@@ -23,6 +23,8 @@ const nextConfig = {
     ]
   },
   env: {
+    APP_NAME: process.env["APP_NAME"],
+    COOKIE_DOMAIN: process.env["COOKIE_DOMAIN"],
     BASE_URL: process.env["BASE_URL"],
     API_BASE_URL: process.env["API_BASE_URL"]
   }

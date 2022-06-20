@@ -4,7 +4,7 @@ import Nav from './Nav'
 
 export default function Layout({ children }){
     return (
-    <div>
+    <div className='full-height'>
         <Head>
             <title>shtl.ink</title>
             <meta name="description" content="url shortener" />

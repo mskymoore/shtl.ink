@@ -27,9 +27,7 @@ export default function Url({ url_record }){
         }
 
         else {
-            return <div>
-                        <code>{data.message}</code>
-                   </div>
+            alert(`${data.message}`)
         }
 
     }

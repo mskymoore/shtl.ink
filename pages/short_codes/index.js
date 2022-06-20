@@ -1,7 +1,11 @@
 import Router from 'next/router'
 import { EmailPasswordAuth } from "supertokens-auth-react/recipe/emailpassword"
+import { useEffect, useState } from 'react'
 
-export default function AllUrlRecordsList({ urls }) {
+export default function AllUrlRecordsList() {
+    const [urls, setUrls] = useState(null)
+    const [isLoading, setLoading] = useState(false)
+
     var copy_to_clipboard = short_code => () => {
         const ta = document.createElement('textarea');
         ta.style.cssText = 'opacity:0; position:fixed; width:1px; height:1px; top:0; left:0;';
@@ -21,7 +25,20 @@ export default function AllUrlRecordsList({ urls }) {
         event.target.blur()
     }
 
-    return  <EmailPasswordAuth>
+    useEffect( () => {
+        setLoading(true)
+         fetch(`/api/all_short_codes`)
+            .then((res) => res.json())
+            .then((urls) => {
+                setUrls(urls)
+                setLoading(false)
+            })
+    },[])
+
+    if (isLoading) return <div className='container'><h3>loading...</h3></div>
+    if (!urls) return <div className='container'><h3>no urls...</h3></div>
+
+    return  <EmailPasswordAuth>  
             <div className='container'>
                 <h3>short code list</h3>
                 {urls.map(url => 
@@ -39,14 +56,11 @@ export default function AllUrlRecordsList({ urls }) {
                 </div>
 
                 )}
-            </div> </EmailPasswordAuth>
+            </div>
+            </EmailPasswordAuth>
 }
 
+
 export async function getServerSideProps({ params }) {
-    const req = await fetch(`${process.env.API_BASE_URL}/all_short_codes`);
-    const data = await req.json();
-    
-    return {
-        props: { urls: data }
-    }
+    return { props: {}}
 }

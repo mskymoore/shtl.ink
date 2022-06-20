@@ -3,28 +3,29 @@ import Image from 'next/image'
 import { useRouter }  from 'next/router'
 import { signOut } from "supertokens-auth-react/recipe/emailpassword"
 import Session from 'supertokens-auth-react/recipe/session'
-import { useEffect, useRef } from 'react'
+import { useEffect, useState } from 'react'
 
 export default function Nav(){
-    const user = useRef(null)
+    const [user, setUser] = useState(null)
     const router = useRouter();
 
     async function onLogout() {
         await signOut();
-        user.current = null
+        setUser(null)
         router.push('/signout');
     }
 
     useEffect( () => {
         async function checkSession(){
+
             if (await Session.doesSessionExist()){
-                return await Session.getUserId()
+                setUser(await Session.getUserId())
             }
             else {
-                return null
+                setUser(null)
             }
         }
-        user.current = checkSession() 
+        checkSession() 
     }, [])
 
     var goToRoute = route => () => {
@@ -32,7 +33,7 @@ export default function Nav(){
     }
 
     var authComponent
-    if (user.current === null) {
+    if (user === null) {
         authComponent = (<li onClick={goToRoute('/auth')} className='column'>
                             <Link href='/auth'>sign in</Link>
                          </li>)

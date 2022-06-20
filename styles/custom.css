@@ -2,6 +2,21 @@
     background-color: #000000;
 }
 
+html, body {
+    height: 100%;
+    background-color: #000000;
+}
+  
+.full-height {
+    background-color: #000000;
+    height: 100%;
+}
+
+#__next {
+    background-color: #000000;
+    height: 100%;
+}
+
 .button-black {
     background-color: #1f002c;
     border-color: black;
