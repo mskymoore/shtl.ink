@@ -14,9 +14,9 @@ export const frontendConfig = () => {
           error: '#ad2e2e',
           textTitle: "white",
           textLabel: "white",
-          textInput: '#666666',
+          textInput: '#ffffff',
           textPrimary: "white",
-          textLink: '#666666',
+          textLink: '#ffffff',
           inputBackground: '#000',
           superTokensBrandingBackground: '#1f002c',
           superTokensBrandingText: '#ffffff'

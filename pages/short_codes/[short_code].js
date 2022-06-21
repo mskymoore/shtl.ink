@@ -64,17 +64,19 @@ export default function Url({ url_record }){
 
     if (url_record.url){
         return  <div className="container">
-                    <h3>{url_record.short_code}</h3>
                     <div className='card'>
-                        <code>{process.env.BASE_URL}/{url_record.short_code}</code>&#8921;
-                        <code>{url_record.url}</code><br/>
-                        <button className='button-black' onFocus={stop_focus} onClick={copy_to_clipboard} type="copy">copy</button>
-                        <button className='button-black' onClick={delete_short_code} type="delete">delete</button>
+                    <h3>{url_record.short_code}</h3>
+                        <div className='row'>
+                        <code className='short-code column'>{process.env.BASE_URL}/{url_record.short_code}</code>&#8921;
+                        <code className='column'>{url_record.url}</code><br/>
+                        </div>
+                        <button className='button-shtl' onFocus={stop_focus} onClick={copy_to_clipboard} type="copy">copy</button>
+                        <button className='button-shtl' onClick={delete_short_code} type="delete">delete</button>
                         <form onSubmit={modify_short_code}>
                             <fieldset id="new_code">
                                 <label htmlFor="new_short_code">new short code:</label>
                                 <input type="text" id="new_short_code" name="new_short_code" required={true} minLength={1} maxLength={33} />
-                                <button className='button-black' onFocus={stop_focus} type="modify">modify</button>
+                                <button className='button-shtl' onFocus={stop_focus} type="modify">modify</button>
                             </fieldset>
                         </form>
                     </div>

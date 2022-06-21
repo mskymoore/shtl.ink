@@ -6,15 +6,12 @@ export default function Url({ url_record }){
     const { short_code } = router.query
     if (url_record.url){
         const Redirect = redirect(`${process.env.API_BASE_URL}/${url_record.short_code}`)
-        return <Redirect>
-                <div>
-                    <a>
-                        <p>
-                            <code>redirecting to {url_record.url}</code>
-                        </p>
-                    </a>
-                </div>
-            </Redirect>
+        return  <Redirect>  
+                    <div className='redirect'>
+                        <p></p>
+                        <code>redirecting to {url_record.url}</code>
+                    </div>
+                </Redirect> 
     }
     else {
         return <div>

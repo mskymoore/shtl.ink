@@ -21,13 +21,13 @@ export default function Home() {
 
   return (
     <div className='container'>
-        <h3>modify short code</h3>
           <div className='card'>
+            <h3>modify short url</h3>
             <form onSubmit={go_to_short_code}>
               <fieldset id="code_search">
-                <label htmlFor="short_code">short code:</label>
+                <label htmlFor="short_code">short url:</label>
                 <input type="text" id="short_code" name="short_code" required={true} minLength={1} maxLength={2000}/>
-                <button className="button-black" type="submit">go</button>
+                <button className="button-shtl" type="submit">go</button>
               </fieldset>
             </form>
           </div>

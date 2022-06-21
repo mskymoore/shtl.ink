@@ -2,6 +2,7 @@ import {useRouter}  from 'next/router'
 
 export default function Home() {
   const router = useRouter();
+
   async function create_short_code(event){
     event.preventDefault()
     const url = event.target.url.value
@@ -34,18 +35,18 @@ export default function Home() {
 
   return (
     <div className="container">
-      <h3>create short url</h3>
       <div className="card">
+        <h3>create short url</h3>
         <form onSubmit={create_short_code}>
           <fieldset>
-          <label htmlFor="url">url:</label>
+          <label htmlFor="url">long url:</label>
           <input type="text" id="url" name="url" maxLength={2000} required={true}
             pattern="https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)"/>
           <div className='showHide'>
             <input type="checkbox" id="toggle" />
             <label htmlFor="toggle">
                 <span className='expand'>
-                    custom short code
+                    custom short url ending
                     <span className="changeArrow arrow-rt">&nbsp;&gt;</span>
                     <span className="changeArrow arrow-dn">&nbsp;v</span>
                 </span>
@@ -56,7 +57,7 @@ export default function Home() {
                 </fieldset>
             </div>
           </div>
-          <button className="button-black" type="submit">Create</button>
+          <button className="button-shtl" type="submit">Create</button>
           </fieldset>
         </form> 
       </div>

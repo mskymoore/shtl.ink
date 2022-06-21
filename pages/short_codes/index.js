@@ -40,18 +40,18 @@ export default function AllUrlRecordsList() {
 
     return  <EmailPasswordAuth>  
             <div className='container'>
-                <h3>short code list</h3>
                 {urls.map(url => 
                 <div className='card-small' key={url.short_code}>
+                    <h3>{url.short_code}</h3>
                     <div className='row'>
                         <code className='short-code column'>{process.env.BASE_URL}/{url.short_code}</code>
                         &#8921;
                         <code className='column'>{url.url}</code>
-                       
                     </div>
                     <div className='row'>
-                        <button className='button-black column' onFocus={stop_focus} onClick={copy_to_clipboard(url.short_code)}>copy</button>
-                        <button className='button-black column' onClick={go_to_short_code(url.short_code)} type="submit">modify</button>
+                        <button className='button-shtl column' onFocus={stop_focus} onClick={copy_to_clipboard(url.short_code)}>copy</button>
+                        &nbsp;&nbsp;&nbsp;
+                        <button className='button-shtl column' onClick={go_to_short_code(url.short_code)} type="submit">modify</button>
                     </div>
                 </div>
 

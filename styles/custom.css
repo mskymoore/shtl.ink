@@ -1,71 +1,110 @@
-* {
-    background-color: #000000;
+.navigation {
+    background-color: #111111;
+    height: 5.2rem;
 }
 
-html, body {
+h3 {
+    color: #333333;
+}
+
+.navigation a{
+	display: inline;
+	font-size: 1.6rem;
+	line-height: 5.2rem;
+	padding: 0;
+	text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.navigation-list {
+    list-style-type: none;
+    margin-right: 5rem;
+    padding: 0;
+}
+
+.navigation-item {
+    display: inline;
+    padding: 10px;
+}
+
+.octocat {
+	border: 0;
+	color: #f4f5f6;
+	fill: #1f002c;
+	height: 5.2rem;
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: 5.2rem;
+	z-index: 2;
+}
+
+.octocat .octocat-arm, .octocat .octocat-body {
+	fill: #f4f5f6;
+}
+
+.octocat:hover .octocat-arm {
+    animation:b .56s infinite;
+    transform-origin:13rem 10.6rem
+}
+
+@keyframes b {
+ 0%,
+ 50% {
+  transform:rotate(0)
+ }
+ 25%,
+ 75% {
+  transform:rotate(-25deg)
+ }
+}
+
+body {
     height: 100%;
     background-color: #000000;
 }
-  
-.full-height {
-    background-color: #000000;
-    height: 100%;
+
+.redirect {
+    text-align: center;
+    justify-content: center;
 }
 
-#__next {
-    background-color: #000000;
-    height: 100%;
-}
-
-.button-black {
+.button-shtl {
     background-color: #1f002c;
     border-color: black;
     height: 2.8rem;
     line-height: 2.8rem;
     padding: 0 1.5rem;
     width: 100%;
+    margin-top: 10px;
 }
 
-.row .button-black {
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-.nav-bar ul li, img, a {
+.button-shtl:hover {
     background-color: #1f002c;
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 5px;
-    margin: 1px;
-    text-align: center;
-}
-
-.nav-bar ul li {
-    border-style: inset;
-    border-color: #666666
-}
-
-.nav-bar a:focus {
-    color: #ffffff
+    border-color: black;
 }
 
 .card{
-    background-color: #000000;
+    background-color: #111111;
     border-color: #666666;
+    color: #ffffff;
     border-width: 2px;
     border-style: solid;
     border-radius: 15px;
     padding: 3rem;
     margin: 1rem;
+    position: relative;
 }
 
 .card-small{
     background-color: #111111;
     border-color: #666666;
+    color: #ffffff;
     border-width: 2px;
     border-style: solid;
     border-radius: 15px;
-    padding: 1rem;
+    padding: 3rem;
     margin: 1rem;
     position: relative;
 
@@ -75,19 +114,16 @@ html, body {
     padding: 1rem;
 }
 
+.card input {
+    background-color: #000000;
+    color: #ffffff;
+}
+
 code {
     color: #1f002c;
     background-color: #999999;
-}
-
-.card input {
-    background-color: #000000;
-    color: #999999;
-}
-
-.card code {
-    color: #1f002c;
-    background-color: #999999;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .fieldsetContainer {
