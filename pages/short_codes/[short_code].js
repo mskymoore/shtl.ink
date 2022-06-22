@@ -74,7 +74,7 @@ export default function Url({ url_record }){
                         <button className='button-shtl' onClick={delete_short_code} type="delete">delete</button>
                         <form onSubmit={modify_short_code}>
                             <fieldset id="new_code">
-                                <label htmlFor="new_short_code">new short code:</label>
+                                <label htmlFor="new_short_code">new short url ending:</label>
                                 <input type="text" id="new_short_code" name="new_short_code" required={true} minLength={1} maxLength={33} />
                                 <button className='button-shtl' onFocus={stop_focus} type="modify">modify</button>
                             </fieldset>
