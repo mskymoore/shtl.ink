@@ -8,16 +8,17 @@ export const frontendConfig = () => {
     appInfo,
     recipeList: [
       EmailPasswordReact.init({
+        //useShadowDom: false,
         palette: {
           primary: '#1f002c',
           background: '#111111',
           error: '#ad2e2e',
-          textTitle: "white",
-          textLabel: "white",
-          textInput: '#ffffff',
-          textPrimary: "white",
+          textTitle: "#ffffff",
+          textLabel: "#ffffff",
+          textInput: '#000000',
+          textPrimary: "#ffffff",
           textLink: '#ffffff',
-          inputBackground: '#000',
+          inputBackground: '#999999',
           superTokensBrandingBackground: '#1f002c',
           superTokensBrandingText: '#ffffff'
         },
