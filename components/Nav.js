@@ -15,6 +15,10 @@ export default function Nav(){
         router.push('/signout');
     }
 
+    function stop_focus(event){
+        event.target.blur()
+    }
+
     useEffect( () => {
         async function checkSession(){
 
@@ -39,6 +43,15 @@ export default function Nav(){
                             <Link className='navigation-link' href=''>sign out</Link>
                          </li>)
     }
+
+    var dropdownAuthComponent
+    if (user === null) {
+        dropdownAuthComponent = <Link className='dropdown-link-text' href='/auth'>&nbsp;&nbsp;&nbsp;sign in</Link>
+    }
+    else {
+        dropdownAuthComponent = <text className='dropdown-link-text' onClick={onLogout}><Link href=''>&nbsp;&nbsp;&nbsp;sign out</Link></text>
+        //<Link className='dropdown-link' href=''>&nbsp;&nbsp;&nbsp;sign out</Link>
+    }
     
     return (
         <nav className='navigation'>
@@ -51,8 +64,17 @@ export default function Nav(){
                 <li className='navigation-item'>
                     <Link className='navigation-link' href='/modify'>modify url</Link>
                 </li>
-                {authComponent}
+                {authComponent} 
             </ul>
+            <div className='dropdown'>
+                <button onFocus={stop_focus} className='dropbutton'>&#9776;</button>
+                <div className='dropdown-content'>
+                    <Link className='dropdown-link-text' href='/short_codes'>&nbsp;&nbsp;&nbsp;view urls</Link><br/>
+                    <Link className='dropdown-link-text' href='/modify'>&nbsp;&nbsp;&nbsp;modify url</Link><br/>
+                    {dropdownAuthComponent}<br/>
+                </div>
+            </div>
+
             <Link href="https://github.com/mskymoore/shtl.ink" rel="noopener" target="_blank" title="Milligram on Github">
                 <svg className="octocat" viewBox="0 0 250 250">
                     <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>

@@ -7,6 +7,62 @@ h3 {
     color: #333333;
 }
 
+.dropdown {
+    display: none;
+    overflow: hidden;
+    float: right;
+}
+
+.dropbutton {
+    display: inherit;
+    float: right;
+    margin-right: 5rem;
+    margin-top: .8rem;
+    height: 2.8rem;
+    line-height: 2.8rem;
+    padding: 0 .5rem;
+    padding-bottom: .2rem;
+    background-color: #1f002c;
+    border-color: #000000;
+    font-size: 30px;
+}
+
+.dropbutton:hover {
+    background-color: #1f002c;
+    border-color: #000000;
+}
+
+.dropdown-content {
+    display: none;
+    float: right;
+    position: absolute;
+    background-color: #111111;
+    min-width: 100px;
+    z-index: 1;
+    margin-top: 4rem;
+}
+
+.dropdown-content a{
+    display: block;
+    padding: 12px 16px;
+    text-align: center;
+}
+
+.dropdown-link-text{
+    font-weight: bold;
+    color: #ffffff;
+    margin-top: 300px;
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+@media (max-width: 600px) {
+    .dropdown { display: inline; }
+    .navigation-list { display: none; }
+}
+
 .navigation a{
 	display: inline;
 	font-size: 1.6rem;

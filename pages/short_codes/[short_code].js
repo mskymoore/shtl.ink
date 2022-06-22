@@ -83,12 +83,9 @@ export default function Url({ url_record }){
                 </div>
     }
     else {
-        return <div>
-                    <a>
-                        <p>
-                            <code>{url_record.message}</code>
-                        </p>
-                    </a>
+        return <div className='redirect'>
+                    <p></p>
+                    <code>{url_record.message}</code>
                 </div>
     }
 }
