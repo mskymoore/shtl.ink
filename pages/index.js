@@ -41,7 +41,7 @@ export default function Home() {
           <fieldset>
           <label htmlFor="url">long url:</label>
           <input type="text" id="url" name="url" maxLength={2000} required={true}
-            pattern="(http|https|androidapp)?(:\/\/)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)"/>
+            pattern="(http|https|androidapp)?(:\/\/)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}(\.[a-zA-Z0-9()]{1,256})+\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)"/>
           <div className='showHide'>
             <input type="checkbox" id="toggle" />
             <label htmlFor="toggle">
