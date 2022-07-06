@@ -5,7 +5,7 @@ export default function Home() {
     event.preventDefault()
     const data = event.target.short_code.value
 
-    const url_regex_pattern = /https?:\/\/[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.?[a-z]{0,4}:?[0-9]{0,5}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi;
+    const url_regex_pattern = /(http|https|androidapp)?(:\/\/)?[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.?[a-z]{0,4}:?[0-9]{0,5}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi;
     const url_regex = RegExp(url_regex_pattern);
 
     if (data.match(url_regex) && data.includes(process.env.BASE_URL)){
